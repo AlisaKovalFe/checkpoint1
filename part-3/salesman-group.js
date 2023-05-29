@@ -1,5 +1,7 @@
-const ClientGroup = require('./client-group');
+const PersonGroup = require('./person-group')
 
-module.exports = class SalesmanGroup extends ClientGroup {
-  constructor() {}
+module.exports = class SalesmanGroup extends PersonGroup {
+  get salesmen() {
+    return this.persons
+  }
 };
